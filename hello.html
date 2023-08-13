@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    hola soy un título
+  </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KevinRJF web test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      line-height: 150%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #e9e9e9;
+    }
+
+    .header h1 {
+      color: #222222;
+      font-size: 30px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .header .social a {
+      padding: 0 5px;
+      color: #222222;
+    }
+
+    .left {
+      float: left;
+      width: 180px;
+      margin: 0;
+      padding: 1em;
+    }
+
+    .content {
+      margin-left: 190px;
+      border-left: 1px solid #d4d4d4;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    li a.active {
+      background-color: #6195ed;
+      color: white;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #29292a;
+      color: white;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      padding: 8px;
+    }
+
+    tr:nth-child(1) {
+      background-color: #6195ed;
+      color: white;
+    }
+
+    tr td i.fas {
+      display: block;
+      font-size: 35px;
+      text-align: center;
+    }
+
+    .footer {
+      padding: 55px 20px;
+      background-color: #2e3550;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>KevinRJF</h1>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </header>
+    <aside class="left">
+      <img src="https://media.discordapp.net/attachments/883931044317888552/892805500847149056/speed-1.gif" width="100px" />
+      <ul>
+        <li><a class="active" href="#home">Pag Principal</a></li>
+        <li><a href="#career">algo</a></li>
+        <li><a href="#contact">no sé</a></li>
+        <li><a href="#about">tampoco sé</a></li>
+      </ul>
+      <br><br>
+      <p1>"Hacé algo que te cause orgullo. Yo convertí el pasto a código."<br>- Kevin</p1>
+    </aside>
+    <main class="content">
+      <h2>Página test de Kevin</h2>
+      <p2>Esto es solo una página prueba para testear habilidades en html, solamente</p2>
+      <h2>Mi carrera</h2>
+      <p3>Estoy ahorita estudiando Computer Science en Gettysburg College</p3>
+      <hr><br>
+      <h2>En qué te puedo ayudar?</h2>
+      <table>
+        <tr>
+          <th>SKILL 1</th>
+          <th>SKILL 2</th>
+          <th>SKILL 3</th>
+        </tr>
+        <tr>
+          <td><i class="fas fa-broom"></i></td>
+          <td><i class="fas fa-archive"></i></td>
+          <td><i class="fas fa-trailer"></i></td>
+        </tr>
+        <tr>
+          <td>pasarte un pincel por la cara</td>
+          <td>Meterte en una caja</td>
+          <td>Llevarte por el desierto</td>
+        </tr>
+        <tr>
+      </table>
+      <form>
+        <input autocomplete="off" autofocus id="name" placeholder="Cuál es tu nombre?" type="text">
+        <br>
+        <br>
+        <p4></p4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <script>
+          function blink() {
+            let button = document.querySelector('button');
+            if (button.style.visibility == hidden) {
+              button.style.visibility == 'visible';
+            }
+            else {
+              button.style.visibility == 'hidden';
+            }
+          }
+          window.setInterval(blink, 500)
+        </script>
+        <button class="blink" type="submit">Este botón no hace nada</button>
+      </form>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('form').addEventListener('submit', function(event) {
+            let name = document.querySelector('#name').value;
+            alert('ok si hacía algo');
+            event.preventDefault();
+          });
+        });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          let input = document.querySelector('input');
+          input.addEventListener('keyup', function(event) {
+            let name = document.querySelector('p4');
+            if (input.value) {
+              name.innerHTML = `que onda, ${input.value}`;
+            }
+            else {
+              name.innerHTML = `que onda, como te llames`;
+            }
+          });
+        });
+      </script>
+    </main>
+    <footer class="footer">&copy; Copyright mío, supongo lol</footer>
+  </div>
+</body>
+
+</html>
