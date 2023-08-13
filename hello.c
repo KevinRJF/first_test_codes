@@ -2,5 +2,7 @@
 
 int main(void)
 {
-    printf("Hello, world\n");
+    printf("Que onda, gente\n");
 }
+
+//Wow mi primer código, que tuani.
